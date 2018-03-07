@@ -1,8 +1,9 @@
 export default {
-    templete: "<div>{{message}}</div>",
-    data(){
-        return {
-            message: 'Hello world!'
-        }
-    }
+    template: "<div>{{message}}</div>",
+    props: ['message'],
+    // data(){
+    //     return {
+    //         message: 'Hello world!'
+    //     }
+    // }
 };

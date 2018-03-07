@@ -1,8 +1,19 @@
 import Vue from 'vue/dist/vue.js'; //don't do this in production
 import test from 'ava';
-import Notofication from './../src/Notification';
+import Notification from './../src/Notification';
 
 test('that it renders a notification', t => {
-    new Vue(Notofication).$mount();
-    // t.is(Notofication.data().message, 'Hello world!')
+    // let n = new Vue(Notification).$mount();
+
+    // console.log(n.$el.textContent);
+
+    let N = Vue.extend(Notification);
+
+    let vm = new N({
+        propsData: {
+            message: 'foobar'
+        }
+    }).$mount();
+
+    t.is(vm.$el.textContent, 'foobar')
 });
