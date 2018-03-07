@@ -15,5 +15,18 @@ test('that it renders a notification', t => {
         }
     }).$mount();
 
-    t.is(vm.$el.textContent, 'foobar')
+    t.is(vm.$el.textContent, 'FOOBAR')
+});
+
+
+test('that is capitalizes the message', t =>{
+    let N = Vue.extend(Notification);
+
+    let vm = new N({
+        propsData: {
+            message: 'foobar'
+        }
+    }).$mount();
+
+    t.is(vm.$el.textContent, 'FOOBAR')
 });
