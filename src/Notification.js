@@ -1,5 +1,5 @@
 export default {
-    templete: "<div>{{message}}</div>"
+    templete: "<div>{{message}}</div>",
     data(){
         return {
             message: 'Hello world!'
